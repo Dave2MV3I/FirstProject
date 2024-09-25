@@ -17,10 +17,28 @@ public class Fahrzeug {
         this.width = width;
         this.height = height;
         datenAnzeigen();
+
     }
 
     // Methoden
     public void datenAnzeigen(){
         System.out.println("Hi. I'm your new " + brand + " " + model + " and my dimensions are " + length + " * " + width + " * " + height + ". For further information, look in the manual. Enjoy!");
+    }
+
+    // getter und setter
+    public String getBrand(){
+        return this.brand;
+    }
+
+    public void setBrand(String brand){
+        this.brand = brand;
+    }
+
+    public String getModel(){
+        return this.model;
+    }
+
+    public void setModel(String model){
+        this.model = model;
     }
 }
