@@ -49,20 +49,24 @@ public class Fahrzeug {
                 this.fahrer = fahrer;
             }
 
+            public Person getFahrer(){
+                return this.fahrer;
+            }
+
             public void setBeifahrer(Person beifahrer){
                 this.beifahrer = beifahrer; // Das erhaltene Objekt wird der ersten Referenz zugewiesen, danit man später über die Referenz auf das Objekt zugreifen kann
             }
 
-        public void  nenneBesatzung(String fahrerName, String beifahrerName){
+            public Person getBeifahrer(){
+                return this.beifahrer;
+            }
+
+        public void  nenneBesatzung(){
             System.out.println("");
-            System.out.println("Fall 1: " + this.fahrer + " sitzt am Steuer von Fahrzeug 1 und " + this.beifahrer + " fährt Shotgun.");
-            System.out.println("Fall 2: " + fahrerName + " sitzt am Steuer von Fahrzeug 1 und " + beifahrerName + " fährt Shotgun.");
-            System.out.println("Fall 3: " + this.fahrer.getName() + " sitzt am Steuer von Fahrzeug 1 und " + this.beifahrer.getName() + " fährt Shotgun.");
+            System.out.println(this.fahrer.getName() + " sitzt am Steuer von Fahrzeug 1 und " + this.beifahrer.getName() + " fährt Shotgun.");
 
             // Wenn die Besatzung genannt werden soll, bevor setFahrer() und setBeifahrer() die Referenzen fahrer und beifahrer gesetzt haben, passiert folgendes:
-            // Fall 1-- Keine Referenz auf einen Speicherort des Objektes, also Ausgabe "null" anstelle der Person. Ausgabe: "Fall 1: null sitzt am Steuer von Fahrzeug 1 und null fährt Shotgun."
-            // Fall 2-- Namen der Besatzung wurden unabhängig der Referenzen fahrer und beifahrer aus MainControl als Parameter mitgegeben und werden verwendet. Ausgabe: "Fall 2: Peter sitzt am Steuer von Fahrzeug 1 und Jack fährt Shotgun."
-            // Fall 3-- Es wird die Methode getName() eines unbekannten Objektes aufgerufen, also gibt es eine Fehlermeldung als Ausgabe.
+            // Es wird die Methode getName() eines unbekannten Objektes aufgerufen, also gibt es eine Fehlermeldung als Ausgabe.
         }
 
 }

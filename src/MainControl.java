@@ -24,9 +24,9 @@ public class MainControl {
 
             fahrzeug1 = new Fahrzeug("Tesla", "Model Y", 4750, 1921, 1624);
 
-            fahrzeug1.setFahrer(person1); // Ganzes Objekt weitergeben
+            fahrzeug1.setFahrer(person1); // Referenz auf ganzes Objekt weitergeben
             fahrzeug1.setBeifahrer(person2);
 
-            fahrzeug1.nenneBesatzung(person1.getName(), person2.getName()); // Strings werden eingesetzt
+            fahrzeug1.nenneBesatzung(); // Strings werden eingesetzt
         }
 }
